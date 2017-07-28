@@ -1,0 +1,18 @@
+<div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+<div class="card" >
+
+<!-- Heading -->
+<div class="card-block">
+<h4 class="card-title"><%= property.name %></h4>
+<h6 class="card-subtitle text-muted"><%= "#{number_to_currency(property.cost, unit: property.currency, precision: 0)}" %></h6>
+</div>
+
+<!-- Image -->
+<img src="https://d2w31iprc6cx5g.cloudfront.net/luxelet/data/45100/small_dsc7418.jpg" alt="Photo of sunset">
+
+<!-- Text Content -->
+<div class="card-block">
+<p class="card-text"><%= property.description %></p>
+</div>
+</div>
+</div>
