@@ -10,7 +10,7 @@ Mockups :
     ![login](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_login.png "Login")
 
  2. Dashboard
- 
+
     ![dashboard](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_dashboard.png "Dashboard")
 
  3. Properties
@@ -24,12 +24,20 @@ Assignments :
  1. Create Login and Logout User with [devise gem](https://github.com/plataformatec/devise).
  2. Create dashboard with following models and association : 
     - User : 
+      :username, :full_name, :type, :role
     - Customer : extends User using [Single Table Inheritance](http://guides.rubyonrails.org/association_basics.html#single-table-inheritance).
+      type: "Customer"
     - Partner : extends User using [Single Table Inheritance](http://guides.rubyonrails.org/association_basics.html#single-table-inheritance). 
+      type: "Partner"
     - Property :
+      :name, description, address, searcable, cost, tax, currency, :user_id
     - Enquiry : 
+      :property_id, :checkin, :checkout, :number_of_guests, :reserved_at, :booked_at, :expired_at, :completed_at, :reference_number, :number_of_adults, :number_of_children, :number_of_infants, :total_cost, :tax, :currency, :user_id
     - Message : 
+      :enquiry_id, :from, :to, :subject, :body, :message_at
     - Payment : 
+      :enquiry_id, :amount, :currency, :payment_at
+
 
 Completing assignments : 
 -----------
