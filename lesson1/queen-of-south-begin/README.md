@@ -9,6 +9,9 @@ Mockups :
 
     ![login](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_login.png "Login")
 
+    ![sign_up](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_sign_up.png "Sign Up")
+
+
  2. Dashboard
 
     ![dashboard](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_dashboard.png "Dashboard")
