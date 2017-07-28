@@ -9,6 +9,8 @@ Mockups :
  2. Dashboard
  3. Properties
  4. Enquiry
+ 5. Message
+ 5. Payment
  
 
 Assignments :
@@ -18,12 +20,16 @@ Assignments :
     - User : 
     - Customer : extends User using [Single Table Inheritance](http://guides.rubyonrails.org/association_basics.html#single-table-inheritance).
     - Partner : extends User using [Single Table Inheritance](http://guides.rubyonrails.org/association_basics.html#single-table-inheritance). 
+    - Property :
+    - Enquiry : 
+    - Message : 
+    - Payment : 
 
 Completing assignments : 
 -----------
  1. To start, [fork](https://github.com/udn/rails-course#fork-destination-box) the repository.
  2. Clone the repository to your computer.
- 3. Modify the files and commit changes to complete your solution.
+ 3. Modify the files and commit changes in folder /lesson1/assignments/<your_name>/<project> to complete your assignment.
  4. Push/sync the changes up to GitHub.
  5. Create a pull request on the original repository to turn in the assignment.
 
