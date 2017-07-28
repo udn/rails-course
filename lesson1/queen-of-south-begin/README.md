@@ -6,11 +6,13 @@ This application is for tutorial purpose only.
 Mockups :
 -----------
  1. Login
+
     ![login](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_login.png "Login")
 
  2. Dashboard
+ 
     ![dashboard](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_dashboard.png "Dashboard")
-    
+
  3. Properties
  4. Enquiry
  5. Message
