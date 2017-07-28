@@ -24,19 +24,19 @@ Assignments :
  1. Create Login and Logout User with [devise gem](https://github.com/plataformatec/devise).
  2. Create dashboard with following models and association : 
     - User : 
-      :username, :full_name, :type, :role
+      `:username, :full_name, :type, :role`
     - Customer : extends User using [Single Table Inheritance](http://guides.rubyonrails.org/association_basics.html#single-table-inheritance).
-      type: "Customer"
+      `type: "Customer"`
     - Partner : extends User using [Single Table Inheritance](http://guides.rubyonrails.org/association_basics.html#single-table-inheritance). 
-      type: "Partner"
+      `type: "Partner"`
     - Property :
-      :name, description, address, searcable, cost, tax, currency, :user_id
+      `:name, description, address, searcable, cost, tax, currency, :user_id`
     - Enquiry : 
-      :property_id, :checkin, :checkout, :number_of_guests, :reserved_at, :booked_at, :expired_at, :completed_at, :reference_number, :number_of_adults, :number_of_children, :number_of_infants, :total_cost, :tax, :currency, :user_id
+      `:property_id, :checkin, :checkout, :number_of_guests, :reserved_at, :booked_at, :expired_at, :completed_at, :reference_number, :number_of_adults, :number_of_children, :number_of_infants, :total_cost, :tax, :currency, :user_id`
     - Message : 
-      :enquiry_id, :from, :to, :subject, :body, :message_at
+      `:enquiry_id, :from, :to, :subject, :body, :message_at`
     - Payment : 
-      :enquiry_id, :amount, :currency, :payment_at
+      `:enquiry_id, :amount, :currency, :payment_at`
 
 
 Completing assignments : 
