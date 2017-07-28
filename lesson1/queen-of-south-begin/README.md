@@ -1,20 +1,31 @@
 Queen Of South Start
 ================
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+This application is for tutorial purpose only. 
 
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
-
-Problems? Issues?
+Mockups :
 -----------
+ 1. Login
+ 2. Dashboard
+ 3. Properties
+ 4. Enquiry
+ 
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+Assignments :
+-----------
+ 1. Create Login and Logout User with [devise gem](https://github.com/plataformatec/devise).
+ 2. Create dashboard with following models and association : 
+    - User : 
+    - Customer : extends User using [Single Table Inheritance](http://guides.rubyonrails.org/association_basics.html#single-table-inheritance).
+    - Partner : extends User using [Single Table Inheritance](http://guides.rubyonrails.org/association_basics.html#single-table-inheritance). 
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+Completing assignments : 
+-----------
+ 1. To start, [fork](https://github.com/udn/rails-course#fork-destination-box) the repository.
+ 2. Clone the repository to your computer.
+ 3. Modify the files and commit changes to complete your solution.
+ 4. Push/sync the changes up to GitHub.
+ 5. Create a pull request on the original repository to turn in the assignment.
 
 Ruby on Rails
 -------------
