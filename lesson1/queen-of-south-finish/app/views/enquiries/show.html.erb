@@ -31,6 +31,16 @@
 </p>
 
 <p>
+  <strong>Costss:</strong>
+  <%= "#{@enquiry.currency} #{@enquiry.total_cost}" %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= "#{@enquiry.currency} #{@enquiry.tax}" %>
+</p>
+
+<p>
   <strong>User:</strong>
   <%= @enquiry.user %>
 </p>

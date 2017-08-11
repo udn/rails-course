@@ -1,2 +1,2 @@
 $ ->
-  $(".datepicker").datepicker({ format: 'dd/mm/yyyy' , autoclose: true})
+  $(".datepicker").datepicker({ format: 'yyyy-mm-dd' , autoclose: true})
