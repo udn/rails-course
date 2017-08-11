@@ -16,9 +16,13 @@
   </a>
 </div>
 <div class="row">
-  <div class="col-8">
-    <h4><%= @property.name %></h4>
-    <p><%= @property.description %></p>
+  <div class="col-8 col-sm-8 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><%= @property.name %></h2>
+      <p class="blog-post-meta"><%= @property.updated_at.strftime('%B %d, %Y') %> by <a href="#"><%= @property.user%></a></p>
+
+      <p><%= @property.description %></p>
+    </div>
   </div>
 
   <div class="col-4">
@@ -27,28 +31,38 @@
 
     <!-- Heading -->
     <div class="card-block">
-    <h4 class="card-title"><%= @property.name %></h4>
-    <h6 class="card-subtitle text-muted"><%= "#{number_to_currency(@property.cost, unit: @property.currency, precision: 0)}" %></h6>
-    </div>
-    <div class="card-block">
-      <div class="row">
+      <h6 class="card-title">Price From </h3>
+      <hr>
+      <h3 class="card-subtitle text-muted">
+        <%= "#{number_to_currency(@property.cost, unit: @property.currency, precision: 0)}" %> 
+      </h3>
+      <span>per Night </span>
+      <p>Including tax & service fees</p>
+      <div class="form-group row">
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="checkin">
+          <input type="text" class="date datepicker form-control" placeholder="checkin">
         </div>
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="checkout">
+          <input type="text" class="date datepicker form-control" placeholder="checkout">
         </div>
         <div class="col-4">
           <input type="text" class="form-control" placeholder="guest">
         </div>
       </div>
+      <div class="row">
+        <div class="col-12">
+          <button type="button" class="btn btn-primary">Booking</button>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12">
+          <strong>Inclusions:</strong>
+          <span class="card-title">Breakfast, Housekeeping daily, Purified drinking water, Grocery shopping and butler service, 24x7 security guards, Welcome drink, cool towel, fruit basket upon arrival</span>
+        </div>
+      </div>
     </div>
-
-    <!-- Text Content -->
-    <div class="card-block">
-      <button type="button" class="btn btn-primary">Booking</button>
-    </div>
-    </div>
+  </div>
 
   </div>
 

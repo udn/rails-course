@@ -12,9 +12,9 @@
 
 <!-- Text Content -->
 <div class="card-block">
-<p class="card-text"><%= property.description %></p>
+<p class="card-text"><%= truncate(property.description, length: 200) %></p>
 <%= link_to "Show", property_path(property), class: 'card-link' %>
-<%= link_to "Destroy", edit_property_path(property), class: 'card-link', method: :delete %>
+<%= link_to "Destroy", property_path(property), class: 'card-link', method: :delete %>
 <%= link_to "Edit", edit_property_path(property), class: 'card-link' %>
 </div>
 </div>

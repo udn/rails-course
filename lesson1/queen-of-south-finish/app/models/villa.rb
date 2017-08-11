@@ -1,2 +1,3 @@
 class Villa < Property
+  
 end

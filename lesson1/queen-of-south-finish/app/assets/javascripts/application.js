@@ -11,7 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require rails-ujs
 //= require tether
 //= require bootstrap-sprockets
-//= require_tree .
+//= require bootstrap-datepicker
+//= require main
