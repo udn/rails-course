@@ -24,7 +24,7 @@
       <div class="sidebar-module">
         <h4>Month To Date</h4>
         <ol class="list-unstyled">
-          <li><a href="#"><%= current_user.enquiries.count %> enquiries</a></li>
+          <li><a href="#"><%= current_user.enquiries.count rescue 0 %> enquiries</a></li>
           <li><a href="#">0 on holds</a></li>
           <li><a href="#">0 confirmed</a></li>
           <li><a href="#">0 completed</a></li>
@@ -66,8 +66,10 @@
       
       <div class="row dashboard-wrapper">
         <div class="col-md-12">
-          <% @messages.each do |mess| %>
-            <%= render mess %>
+          <% if @messages %>
+            <% @messages.each do |mess| %>
+              <%= render mess %>
+            <% end %>
           <% end %>
 
           <div class="row float-right">
