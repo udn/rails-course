@@ -17,9 +17,13 @@ Mockups :
     ![dashboard](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_dashboard.png "Dashboard")
 
  3. Properties
+     ![properties](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_properties.png "Properties")
+     ![properties](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_property.png "Property")
  4. Enquiry
+     ![enquiry](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_enquiry.png "Enquiry")
  5. Message
- 5. Payment
+     ![dashboard2](https://raw.githubusercontent.com/udn/rails-course/master/lesson1/queen-of-south-begin/public/mockup_dashboard_2.png "Dashboard 2")
+ 6. Payment
  
 
 Assignments :
