@@ -2,16 +2,15 @@ class Enquiry < ApplicationRecord
   FROM = "no-reply@example.com"
 
   belongs_to :property
-  belongs_to :user
+  belongs_to :customer, foreign_key: :user_id
   has_many :messages
-  accepts_nested_attributes_for :user, :reject_if => :all_blank
+  accepts_nested_attributes_for :customer, :reject_if => :all_blank
 
 
   after_save :send_message
   before_save :set_booking_info
 
   validates_presence_of [
-    :user_id, 
     :checkin, 
     :checkout, 
     :number_of_adults, 
@@ -21,6 +20,10 @@ class Enquiry < ApplicationRecord
 
   def nights
     (checkout.to_date - checkin.to_date).to_i if checkin? && checkout?
+  end
+
+  def fist_message
+    self.messages.first
   end
 
 
@@ -34,7 +37,7 @@ class Enquiry < ApplicationRecord
   def send_message
     self.messages.create(
       from: Enquiry::FROM,
-      to: self.user.email,
+      to: self.customer.email,
       subject: "[#{self.reference_number}] Enquiry for #{self.property}",
       message_at: Time.now,
       body: self.enquiry_message
@@ -43,7 +46,7 @@ class Enquiry < ApplicationRecord
 
   def enquiry_message
     "
-      Hello #{self.user}\n\n
+      Hello #{self.customer}\n\n
       Thanks For Your Enquiry\n
       Checkin: #{self.checkin}\n
       Checkout: #{self.checkout}\n

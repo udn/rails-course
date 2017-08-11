@@ -16,7 +16,7 @@
       <div class="sidebar-module">
         <h4>Guests Activities</h4>
         <ol class="list-unstyled">
-          <li><a href="#">0 Current guests</a></li>
+          <li><a href="#"><%= Customer.count %> Current guests</a></li>
           <li><a href="#">0 Arrivals in next 24 hours</a></li>
           <li><a href="#">0 Departures in next 24 hours</a></li>
         </ol>
@@ -24,7 +24,7 @@
       <div class="sidebar-module">
         <h4>Month To Date</h4>
         <ol class="list-unstyled">
-          <li><a href="#">5 enquiries</a></li>
+          <li><a href="#"><%= current_user.enquiries.count %> enquiries</a></li>
           <li><a href="#">0 on holds</a></li>
           <li><a href="#">0 confirmed</a></li>
           <li><a href="#">0 completed</a></li>
@@ -63,38 +63,20 @@
         </li>
         
       </nav>
-
+      
       <div class="row dashboard-wrapper">
         <div class="col-md-12">
-          New Enquiries
-          <div class="row message">
-            <div class="col-md-2">Marc Sidoti <span class="badge badge-default">Enquiry</span></div>
-            <div class="col-md-4">06/08/2017 to 13/08/2017<br/>Villa Saba 10</div>
-            <div class="col-md-3">Seminyak <br/> USD $241</div>
-            <div class="col-md-2">24 hours ago</div>
-            <div class="col-md-1"><span class="badge badge-default">0</span></div>
-          </div>
+          <% @messages.each do |mess| %>
+            <%= render mess %>
+          <% end %>
+
           <div class="row float-right">
             <a class="btn btn-outline-primary " href="#">View All Enquiries</a>
           </div>
         </div>
-      </div><!-- /.row -->
 
-      <div class="row dashboard-wrapper">
-        <div class="col-md-12">
-          Awaiting Partner Response
-          <div class="row message">
-            <div class="col-md-2">Hilten Mistry <span class="badge badge-default">Enquiry</span></div>
-            <div class="col-md-4">06/08/2017 to 13/08/2017<br/>Villa Kodok</div>
-            <div class="col-md-3">Seminyak <br/> USD $200</div>
-            <div class="col-md-2">24 hours ago</div>
-            <div class="col-md-1"><span class="badge badge-default">3</span></div>
-          </div>
-          <div class="row float-right">
-            <a class="btn btn-outline-primary " href="#">View All New Partner Response</a>
-          </div>
-        </div>
-      </div><!-- /.row -->
+      </div>
+      
 
     </div><!-- /.blog-main -->
 

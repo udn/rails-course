@@ -6,5 +6,6 @@ class Customer < User
   private
   def set_username
     self.username = self.email if self.username.blank?
+    self.role = "role_customer" if self.role.blank?
   end
 end
