@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Property:</strong>
+  <%= @enquiry.property %>
+</p>
+
+<p>
+  <strong>Checkin:</strong>
+  <%= @enquiry.checkin %>
+</p>
+
+<p>
+  <strong>Checkout:</strong>
+  <%= @enquiry.checkout %>
+</p>
+
+<p>
+  <strong>Number of adults:</strong>
+  <%= @enquiry.number_of_adults %>
+</p>
+
+<p>
+  <strong>Number of children:</strong>
+  <%= @enquiry.number_of_children %>
+</p>
+
+<p>
+  <strong>Number of infants:</strong>
+  <%= @enquiry.number_of_infants %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @enquiry.user %>
+</p>
+
+<%= link_to 'Edit', edit_enquiry_path(@enquiry) %> |
+<%= link_to 'Back', enquiries_path %>
