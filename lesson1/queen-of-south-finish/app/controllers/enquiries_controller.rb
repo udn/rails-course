@@ -1,4 +1,5 @@
 class EnquiriesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_enquiry, only: [:show, :edit, :update, :destroy]
 
   # GET /enquiries
@@ -14,7 +15,8 @@ class EnquiriesController < ApplicationController
 
   # GET /enquiries/new
   def new
-    @enquiry = Enquiry.new
+    @enquiry = Enquiry.new(number_of_adults: 2, number_of_children: 0, number_of_infants: 0)
+    @enquiry.build_user
   end
 
   # GET /enquiries/1/edit
@@ -25,7 +27,8 @@ class EnquiriesController < ApplicationController
   # POST /enquiries.json
   def create
     @enquiry = Enquiry.new(enquiry_params)
-
+    generated_password = Devise.friendly_token.first(8)
+    @enquiry.user.password = generated_password if @enquiry.user.blank?
     respond_to do |format|
       if @enquiry.save
         format.html { redirect_to @enquiry, notice: 'Enquiry was successfully created.' }
@@ -69,6 +72,7 @@ class EnquiriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def enquiry_params
-      params.require(:enquiry).permit(:property_id, :checkin, :checkout, :number_of_adults, :number_of_children, :number_of_infants, :user_id)
+      params.require(:enquiry).permit(:property_id, :checkin, :checkout, :number_of_adults, :number_of_children, :number_of_infants, :user_id,
+        user_attributes: [:full_name, :email,:id, :_destroy])
     end
 end

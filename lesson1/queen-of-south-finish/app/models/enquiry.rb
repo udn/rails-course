@@ -1,12 +1,6 @@
 class Enquiry < ApplicationRecord
   belongs_to :property
   belongs_to :user
+  accepts_nested_attributes_for :user, :reject_if => :all_blank
 
-  def initialize(attr={}, opts={})
-    super({
-      number_of_adults: 2,
-      number_of_children: 0,
-      number_of_infants: 0
-    })
-  end
 end

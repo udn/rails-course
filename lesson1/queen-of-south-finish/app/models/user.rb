@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   def to_s
-    self.full_name
+    "#{self.full_name} <#{self.email}>"
   end
 end
