@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @property.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @property.description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>Searchable:</strong>
+  <%= @property.searchable %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @property.cost %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @property.tax %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @property.currency %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @property.user %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>
