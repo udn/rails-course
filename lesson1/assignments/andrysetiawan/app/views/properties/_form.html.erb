@@ -48,7 +48,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :property_user_id %>
+    <%= form.select :user_id, Partner.all.map{|x| [x.full_name, x.id]} %>
   </div>
 
   <div class="actions">

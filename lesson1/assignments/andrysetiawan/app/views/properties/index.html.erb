@@ -2,39 +2,12 @@
 
 <h1>Properties</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Address</th>
-      <th>Searchable</th>
-      <th>Cost</th>
-      <th>Tax</th>
-      <th>Currency</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
 
-  <tbody>
     <% @properties.each do |property| %>
-      <tr>
-        <td><%= property.name %></td>
-        <td><%= property.description %></td>
-        <td><%= property.address %></td>
-        <td><%= property.searchable %></td>
-        <td><%= property.cost %></td>
-        <td><%= property.tax %></td>
-        <td><%= property.currency %></td>
-        <td><%= property.user %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= render property %>
     <% end %>
-  </tbody>
-</table>
+</div>
 
 <br>
 

@@ -1,6 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_property, only: [:show, :edit, :update, :destroy]
+  before_action :set_users, only: [:edit, :new, :create, :update]
 
   # GET /properties
   # GET /properties.json
@@ -66,6 +67,10 @@ class PropertiesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_property
       @property = Property.find(params[:id])
+    end
+
+    def set_users
+      @users = User.all.map{|x| [x.full_name, x.id]}
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

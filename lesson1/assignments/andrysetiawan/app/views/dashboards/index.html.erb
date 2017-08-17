@@ -1,5 +1,5 @@
   <div class="row dashboard-wrapper">
-    
+
     <div class="col-sm-3 blog-sidebar">
       <div class="sidebar-module">
         <h4><%= current_user %></h4>
@@ -42,7 +42,7 @@
     <div class="col-sm-8 offset-sm-1 blog-main">
       <nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md">
         <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
+          <a class="nav-link" href="<%= root_path %>">Dashboard</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Inbox</a>
@@ -54,12 +54,12 @@
           <a class="nav-link" href="#">Reports</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/properties">Properties</a>
+          <a class="nav-link" href="<%= properties_path %>">Properties</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Admin</a>
         </li>
-        
+
       </nav>
 
       <div class="row dashboard-wrapper">
@@ -73,7 +73,7 @@
             <div class="col-md-1"><span class="badge badge-default">0</span></div>
           </div>
           <div class="row float-right">
-            <a class="btn btn-outline-primary " href="#">View All Enquiries</a>
+            <a class="btn btn-outline-primary " href="<%= enquiries_path %>">View All Enquiries</a>
           </div>
         </div>
       </div><!-- /.row -->
@@ -96,6 +96,6 @@
 
     </div><!-- /.blog-main -->
 
-    
+
 
   </div><!-- /.row -->
