@@ -72,7 +72,8 @@ class EnquiriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def enquiry_params
-      params.require(:enquiry).permit(:property_id, :checkin, :checkout, :number_of_adults, :number_of_children, :number_of_infants, :user_id,
-        customer_attributes: [:full_name, :email,:id, :_destroy])
+      #  params.require(:enquiry).permit(:property_id, :checkin, :checkout, :number_of_adults, :number_of_children, :number_of_infants, :user_id,
+      #   customer_attributes: [:full_name, :email,:id, :_destroy])
+      params.require(:enquiry).permit(:property_id, :checkin, :checkout, :number_of_adults, :number_of_children, :number_of_infants, :user_id)
     end
 end
